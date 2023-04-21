@@ -27,8 +27,9 @@ nav.blu a:hover {
 }
 
 img {
-    max-width: 100%;
+    width: 100%;
     padding-left: 3%;
+    object-fit: cover;
 }
 
 h1{
@@ -38,23 +39,32 @@ h1{
     font-size: 60px;
     padding-left: 3%;
 }
-div.primo{
-    display: flex;
-    height: 70%;
+.primo{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-height: 70%;
     margin-top: 3%;
+    max-width: 100%;
+    
 }
 div.secondo{
-    display: flex;
-    height: 62%;
-    margin-top: 3%;
+    margin: 40px auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0px;
 }
-
+div.contenitore
+{
+    margin: 40px auto;
+    display: grid;
+    grid-template-columns:  repeat(auto-fit, minmax(360px, 1fr));
+    gap: 0px; 
+}
 p{
-    margin-left: 3%;
-    font-size: 35px;
-    text-align: justify;
+    margin-left: 10%;
+    font-size: 2.5vw;
     margin-right: 3%;
-    margin-top: 8%;
+    margin-top: 10%;
 }
 
 h2{
@@ -66,24 +76,24 @@ h2{
 }
 
 div div div p{
-    margin-left: 3%;
-    font-size: 25px;
-    text-align: justify;
+    margin-left: 8%;
+    font-size: 200%;
     margin-right: 3%;
     margin-top: 15%;
 }
 
 div div div img{
-    max-width: 450px;
+    max-width: 300px;
+    max-height: 250px;
     padding-left: 3%;
-    width: 350px;
-    height: 250px;
+    width: 100%;
+    height: 275px;
 }
 
 p.testo{
     color: #374D6C;
     font-style: italic;
-    padding-top: 30%;
+    padding-top: 5%;
     width: 47%;
     font-size: 30px;
 
@@ -102,4 +112,10 @@ footer p{
 }
 
 
+@media (max-width: 1420px) {
 
+    div div div p{
+        font-size: 25px;
+    }
+
+}
